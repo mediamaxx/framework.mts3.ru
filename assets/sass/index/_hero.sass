@@ -1,0 +1,397 @@
+.hero
+	margin-top: 272px
+	position: relative	
+	&__bg
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top left
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0		
+		width: 55.5%
+		z-index: -1
+	&-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between	
+		position: relative
+	&__title
+		font-weight: normal
+		margin: 0		
+		font-size: 58px
+		+bold
+		line-height: 1.2
+		letter-spacing: -0.02em		
+		margin-bottom: 30px
+	&__info
+		width: 810px
+		display: inline-block
+		text-align: left
+		padding: 95px 70px 70px 0		
+		&-block
+			position: relative		
+			text-align: right
+			width: 55.5%
+			flex-shrink: 0			
+	&__text
+		font-size: 12px
+		margin-bottom: 95px
+		padding-right: 180px
+
+	&-slider			
+		height: 100%	
+		&-block
+			width: 44.5%	
+			position: relative
+		.slick-list,
+		.slick-track
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+		.slick-dots
+			position: absolute
+			display: none
+			left: 85px
+			bottom: 44px
+			&.is-visible
+				display: block
+	&-slide
+		color: #fff
+		display: inline-block
+		width: 600px
+		height: 100%
+		padding-left: 85px
+		padding-bottom: 115px
+		padding-top: 115px
+		display: -webkit-flex!important
+		display: -moz-flex!important
+		display: -ms-flex!important
+		display: -o-flex!important
+		display: flex!important
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-start
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(#000, .6)			
+			z-index: -1
+		& > .container
+			padding-left: 0
+			padding-right: 0
+			max-width: 100%
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: top center
+			z-index: -1
+
+		&__title
+			font-size: 46px
+			line-height: 1.25
+			margin: 0
+			font-weight: normal
+			+bold
+			small
+				font-size: 36px
+				display: block
+		&__price
+			+bold
+			font-size: 40px
+			margin-top: 40px
+			line-height: 1
+		&__btn
+			height: 42px
+			line-height: 42px
+			margin-top: 20px
+			&.btn--bdr
+				line-height: 40px
+
+	&__play
+		display: inline-block
+		box-shadow: none
+		background-color: transparent
+		cursor: pointer
+		width: 208px
+		height: 208px
+		border-radius: 50%
+		position: relative
+		background-color: #fff
+		border: 1px solid rgba($accent-color, .2)
+		transition: background-color .2s 		
+		position: absolute
+		bottom: 110px
+		right: 40px
+		&:before
+			position: absolute
+			display: inline-block
+			content: ''
+			width: 120px
+			height: 120px
+			border-radius: 50%
+			border: 1px solid rgba($accent-color, .4)
+			@extend .absolute-center
+			box-shadow: none
+			transition: border-color .2s, box-shadow .2s
+			background-color: #fff
+			background-image: url('../img/play-icon-bg.png')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 78px
+		.svg
+			width: 30px
+			height: 30px
+			@extend .absolute-center
+			margin-left: 2px
+		&:hover
+			background-color: rgba(158, 30, 33, 0.05)
+			&:before
+				border-color: rgba(158, 30, 33, 0.84)
+				box-shadow: 0px 4px 7px rgba(158, 30, 33, 0.36)
+
+.tizers
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	flex-wrap: wrap
+	margin: auto -15px -30px
+
+.tizer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	width: 210px
+	margin: 0 15px 30px
+	&__icon
+		display: inline-block 
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		flex-shrink: 0
+		margin-right: 17px
+		border: 1px solid $accent-color
+		position: relative
+		& > img
+			width: 20px
+			height: 20px
+			@extend .absolute-center
+	&__title
+		font-size: 18px
+		line-height: 1.1
+		strong
+			font-weight: normal
+			color: $accent-color
+			+bold
+			display: block
+
+@media only screen and (max-width : 1466px)	
+
+	.hero
+		margin-top: 214px		
+		&__title
+			font-size: 42px
+			margin-bottom: 30px
+		&__text
+			margin-bottom: 70px
+		&__info
+			width: 660px
+			padding: 50px 50px 50px 10px
+		&__play
+			right: 20px
+
+		&-slider		
+			.slick-dots
+				left: 50px
+		&-slide
+			padding-left: 50px
+			padding-right: 50px
+			&__title
+				font-size: 36px
+				small
+					font-size: 28px
+			&__price
+				font-size: 32px
+				margin-top: 30px
+
+	.tizer
+		width: calc(33.33% - 30px)
+		&__icon
+			margin-right: 10px
+		&__title
+			font-size: 16px
+
+@media only screen and (max-width : 1199px)	
+
+	.hero
+		margin-top: 100px		
+		&__bg			
+			width: 50%	
+		&__info
+			width: 470px
+			padding: 50px 30px 50px 10px
+			&-block
+				width: 50%
+		&__text
+			padding-right: 130px
+			margin-bottom: 40px
+		&__play
+			width: 130px
+			height: 130px	
+			bottom: 50%
+			transform: translateY(50%)		
+			&:before				
+				width: 78px
+				height: 78px
+				border: none
+
+		&-slider		
+			&-block
+				width: 50%
+		&-slide
+			padding-top: 50px
+			padding-bottom: 50px
+			justify-content: center
+
+	.tizer
+		width: calc(50% - 30px)
+
+@media only screen and (max-width : 991px)	
+
+	.hero
+		margin-top: 80px
+		&-block
+			flex-direction: column	
+		&__bg			
+			width: 100%	
+		&__info
+			width: 100%
+			padding: 30px 0
+			&-block
+				width: 680px
+				margin-bottom: 0
+				margin-left: auto
+				margin-right: auto
+		&__play
+			right: 0
+
+		&-slider	
+			.slick-list,
+			.slick-track
+				position: relative
+			.slick-dots
+				left: 50%
+				transform: translateX(-50%)
+				margin-left: -280px
+				bottom: 30px
+			&-block
+				width: 100%
+		&-slide
+			padding: 50px 0px 100px
+			& > .container
+				padding-left: 20px
+				padding-right: 20px
+				max-width: 720px
+
+	.tizer
+		width: calc(33% - 30px)
+
+@media only screen and (max-width : 767px)	
+
+	.hero
+		&__title
+			font-size: 36px
+		&__text
+			padding-right: 150px
+		&__info
+			&-block
+				width: 490px
+
+		&-slider	
+			.slick-dots
+				margin-left: -185px
+
+		&-slide
+			& > .container
+				max-width: 540px
+			&__title
+				font-size: 30px
+				small
+					font-size: 24px
+			&__price
+				font-size: 26px
+
+	.tizer
+		width: calc(50% - 30px)
+
+@media only screen and (max-width : 575px)	
+
+	.hero
+		&__info
+			&-block
+				width: 100%
+				padding-left: 20px
+				padding-right: 20px
+		&__play
+			right: 20px
+		&__text
+			margin-bottom: 30px		
+		&__title
+			margin-bottom: 0
+		&-slide
+			padding: 30px 0 70px
+			&__title
+				+semibold
+			&__price
+				+semibold
+		&-slider	
+			.slick-dots
+				margin-left: 0
+				left: 20px
+				transform: none
+
+	.tizers
+		margin: 0 -10px -20px
+
+	.tizer
+		margin: 0 10px 20px
+		&__title
+			font-size: 14px
+
+@media only screen and (max-width : 374px)	
+
+	.hero
+		&__text
+			padding-right: 0
+		&__play
+			top: 0
+			right: 0
+			bottom: auto
+			left: auto
+			display: none
+
+	.tizer
+		&__title
+			font-size: 13px

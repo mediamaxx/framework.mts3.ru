@@ -1,0 +1,281 @@
+.news
+	margin-top: 85px
+	margin-bottom: 80px
+	&-grid
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-start		
+		flex-wrap: wrap
+		margin: 45px -30px -60px 0
+
+.new
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	width: 450px
+	position: relative	
+	margin: 0 30px 60px 0
+	padding-top: 278px
+	background-color: #fff
+	&:hover
+		.new
+			&__title
+				color: $accent-color
+				text-decoration: underline
+				text-decoration-color: $accent-color
+	&__title			
+		font-size: 20px
+		font-weight: normal
+		margin: 0			
+		display: block		
+		line-height: 1.5
+		text-decoration: none
+		text-decoration-color: transparent
+		transition: color .2s, text-decoration-color .2s		
+		margin-bottom: 10px
+	&__text
+		display: block
+		margin-bottom: 10px
+		p
+			margin: 0
+	&__photo
+		width: 100%
+		height: 250px	
+		position: absolute
+		display: block	
+		top: 0
+		left: 0		
+		background-color: $bg-color
+		z-index: 2		
+		overflow: hidden
+		img
+			@extend .object-fit	
+	&__date
+		font-size: 14px
+		white-space: nowrap
+		line-height: 1
+		display: block
+		color: #acacac		
+		margin-bottom: 25px
+	&__more
+		margin-top: auto
+		font-size: 18px
+		color: $accent-color
+		white-space: nowrap
+		border-bottom: 1px solid transparent
+		line-height: 1
+		background-image: url('../img/arrow-more.svg')
+		background-repeat: no-repeat
+		background-size: 20px
+		background-position: top 6px right
+		padding-right: 33px
+		transition: border-color .2s
+		position: relative
+		&:after
+			position: absolute
+			display: block
+			content: ''
+			bottom: -1px
+			left: 0
+			right: 33px
+			height: 1px
+			background-color: transparent
+			transition: background-color .2s 
+		&:hover
+			&:after
+				background-color: $accent-color
+
+.news
+	&-row
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin: 50px -15px -60px
+		.new
+			margin-left: 15px
+			margin-right: 15px
+			width: calc(25% - 30px)
+			padding-top: 375px
+			&:nth-child(1)
+				width: calc(50% - 30px)
+			&__photo
+				height: 344px
+			&__title
+				line-height: 1.2
+				margin-bottom: 15px
+
+		& + .btn
+			position: relative
+			left: 50%
+			transform: translateX(-50%)
+			margin-top: 65px
+			height: 45px
+			line-height: 43px
+
+@media only screen and (max-width : 1466px)			
+
+	.new
+		width: 366px		
+		padding-top: 220px
+		&__photo			
+			height: 200px	
+		&__title
+			font-size: 18px
+		&__date
+			font-size: 13px
+		&__more
+			font-size: 16px
+			background-position: top 5px right
+
+	.news
+		&-row			
+			.new
+				padding-top: 300px
+				&__photo
+					height: 280px
+
+@media only screen and (max-width : 1199px)				
+
+	.new
+		width: 286px	
+		padding-top: 180px
+		&__photo
+			height: 157px
+
+	.news
+		margin-top: 75px
+		margin-bottom: 75px
+		&-row			
+			.new
+				padding-top: 235px
+				&__photo
+					height: 215px
+
+@media only screen and (max-width : 991px)	
+
+	.news
+		&-grid
+			margin-right: -20px
+			margin-bottom: -20px	
+			margin-bottom: -50px		
+
+	.new
+		width: calc(50% - 20px)
+		margin-right: 20px
+		margin-bottom: 50px
+		padding-top: 200px
+		&__photo			
+			height: 180px
+		&__date
+			margin-bottom: 15px
+
+	.news
+		&-row	
+			flex-wrap: wrap	
+			margin-bottom: -50px	
+			.new								
+				width: calc(50% - 30px)			
+				padding-top: 370px
+				&:nth-child(1)
+					width: 100%
+				&__photo
+					height: 350px
+
+@media only screen and (max-width : 767px)			
+
+	.new
+		padding-top: 150px
+		&__photo			
+			height: 130px		
+
+	.news
+		&-row	
+			.new				
+				padding-top: 275px				
+				&__photo
+					height: 245px
+
+@media only screen and (max-width : 575px)		
+
+	.news
+		&-grid
+			margin-right: -15px		
+			margin-top: 30px
+
+	.new			
+		margin-right: 15px
+		width: calc(50% - 15px)		
+		padding-top: 115px	
+		&__photo
+			height: 100px		
+		&__title
+			font-size: 16px
+		&__text
+			font-size: 14px
+			line-height: 1.75		
+		&__date
+			font-size: 12px
+		&__more
+			font-size: 14px
+
+	.news
+		&-row	
+			margin: 35px -10px -40px
+			.new								
+				width: calc(50% - 20px)			
+				margin-left: 10px
+				margin-right: 10px
+				margin-bottom: 40px
+				padding-top: 185px
+				&__photo
+					height: 165px
+
+			& + .btn
+				margin-top: 40px
+			
+@media only screen and (max-width : 374px)		
+
+	.news-grid
+		margin: 30px 0 0
+
+	.new
+		width: 100%
+		margin: 0 0 40px	
+		padding-top: 0
+		&:last-child
+			margin-bottom: 0	
+		&__photo
+			height: 0
+			padding-bottom: 56.25%
+			position: relative
+			top: auto
+			left: auto
+			margin-bottom: 15px
+
+	.news
+		&-row	
+			margin: 35px 0 0
+			.new								
+				width: 100%
+				margin-left: 0px
+				margin-right: 0px
+				padding-top: 0
+				&:last-child
+					margin-bottom: 0
+				&__photo
+					height: 0
+					padding-bottom: 50%
+					position: relative
+					top: auto
+					left: auto
+					margin-bottom: 15px

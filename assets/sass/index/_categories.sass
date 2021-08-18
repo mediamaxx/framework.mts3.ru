@@ -1,0 +1,133 @@
+.categories
+	margin-top: 110px
+	&-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-start
+		margin-left: -7.5px
+		margin-right: -7.5px
+		margin-bottom: -12px
+		margin-top: 40px
+		flex-wrap: wrap	
+
+.category
+	display: inline-block
+	width: calc(20% - 15px)
+	margin-left: 7.5px
+	margin-right: 7.5px
+	margin-bottom: 12px
+	background-color: $bg-color
+	text-align: center
+	transition: background-color .2s 
+	padding-top: 45px
+	padding-bottom: 30px
+	padding-left: 20px
+	padding-right: 20px
+	position: relative
+	&:hover
+		background-color: #efefef
+		.category__title
+			color: $accent-color
+	&__icon
+		display: inline-block
+		width: 90px
+		height: 90px
+		position: relative
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			max-width: 100%
+			max-height: 100%
+	&__title
+		display: block
+		font-size: 18px
+		+semibold
+		transition: color .2s
+		line-height: 1.2
+		margin-top: 15px
+	&--more
+		flex-shrink: 0
+		width: 100%
+		max-width: calc(40% - 15px)
+		margin-left: auto
+		background-color: transparent
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex		
+		align-items: center
+		justify-content: center
+		&:hover
+			background-color: transparent		
+		a
+			font-size: 18px
+			color: $accent-color
+			border-bottom: 1px solid transparent
+			line-height: 1
+			background-image: url('../img/arrow-more.svg')
+			background-repeat: no-repeat
+			background-size: 20px
+			background-position: center right
+			padding-right: 33px
+			text-decoration: none
+			text-decoration-color: transparent
+			transition: text-decoration-color .2s		
+			text-align: left	
+			&:hover
+				text-decoration: underline
+				text-decoration-color: $accent-color
+		&.sm
+			max-width: calc(20% - 15px)			
+		&.lg
+			margin-left: auto
+			width: aut
+
+@media only screen and (max-width : 1199px)	
+
+	.categories
+		margin-top: 74px
+
+@media only screen and (max-width : 991px)	
+
+	.category
+		width: calc(33.3% - 15px)
+
+	.category
+		&--more
+			max-width: calc(33.3% - 15px)
+			&.sm
+				max-width: calc(100% - 15px)
+				width: calc(100% - 15px)
+			&.lg
+				max-width: calc(66.6% - 15px)
+
+@media only screen and (max-width : 575px)	
+
+	.category
+		width: calc(50% - 15px)
+		&__title
+			font-size: 16px
+		&__icon
+			width: 75px
+			height: 75px
+
+	.category
+		&--more
+			width: calc(100% - 15px)
+			max-width: 100%
+			margin-top: 30px
+			padding-top: 0
+			padding-bottom: 0
+			a
+				font-size: 16px
+			&.sm
+				width: calc(50% - 15px)
+			&.lg
+				max-width: calc(100% - 15px)
+				width: calc(100% - 15px)

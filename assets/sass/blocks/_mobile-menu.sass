@@ -1,0 +1,301 @@
+.mobile-menu
+	&__logo
+		display: none
+		width: calc(100% - 50px)
+		position: absolute
+		left: 10px
+		top: 7px
+		width: 80px
+	&__bot
+		display: none
+	&__hamburger
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 2
+		display: none
+		background-color: $accent-color			
+		margin-left: 0	
+		width: 42px
+		height: 42px
+		padding: 12px
+		.hamburger-inner,
+		.hamburger-inner::after,
+		.hamburger-inner::before		
+			background-color: #fff	
+			height: 1px			
+			width: 100%
+		&:hover
+			.hamburger-inner,
+			.hamburger-inner::after,
+			.hamburger-inner::before		
+				background-color: #fff		
+
+@media only screen and (max-width : 1199px)		
+
+	.mobile-menu	
+		&__logo
+			display: inline-block
+		&__bot
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			text-align: left
+			margin-left: 0
+			width: 280px
+			padding: 20px
+			color: $text-color	
+			.phone__tels
+				margin-top: 10px		
+		&__address
+			margin-top: 25px
+		&__email
+			margin-top: 15px
+			+bold
+			a				
+				color: $accent-color
+				text-decoration: underline
+				transition: color .2s
+				+medium
+		&__social
+			margin-top: 30px
+			.social__link
+				path
+					fill: $accent-color
+		&__btn
+			height: 35px
+			line-height: 35px
+			margin-top: 20px
+			font-size: 14px
+			min-width: auto
+			width: auto
+			padding: 0 30px
+
+		&__hamburger
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex				
+
+	.overlay	
+		background-color: rgba(#000, .6)
+		opacity: 0
+		transition: all .3s linear
+		visibility: hidden
+		position: fixed
+		top: 0
+		height: 100vh
+		left: 0
+		right: 0
+		z-index: 20
+		cursor: pointer
+		&.is-visible
+			opacity: 1
+			visibility: visible
+
+	.menu-block
+		position: fixed
+		top: 0
+		left: 0
+		width: 280px
+		height: 100%
+		max-height: 100vh
+		z-index: 20		
+		overflow: hidden
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch	
+		display: block
+		margin-left: -100%
+		transition: margin-left .5s		
+		margin-top: 0		
+		background-color: $body-bg
+		color: $text-color
+		padding: 70px 0 15px
+		border: none
+		.container
+			padding: 0
+		&.noscroll-y
+			overflow-y: hidden
+		&.visible
+			margin-left: 0 
+
+	.menu		
+		height: auto
+		padding: 0 
+		margin-left: 0
+		width: 100%
+		border: none
+		&__list			
+			margin: 0
+			flex-direction: column
+			align-items: flex-start
+			&--top
+				.menu__item
+					border-bottom: 1px solid #e4e4e4
+					
+		&__item
+			width: 100%
+			padding: 0 
+			margin: 0
+			position: static	
+			line-height: 1
+			& + .menu__item
+				margin-left: 0
+				border-bottom: 1px solid #e4e4e4
+			&:hover				
+				.submenu
+					opacity: 0
+					visibility: hidden
+					&.slide
+						opacity: 1
+						visibility: visible				
+
+			&--is-catalog		
+				.menu__link
+					padding: 15px 50px 15px 					
+					font-size: 16px
+					+medium
+					position: relative
+					&:after
+						position: absolute
+						content: ''
+						display: inline-block					
+						right: 15px
+						top: 50%
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 4px 4px 0 4px
+						border-color: #fff transparent transparent transparent	
+						transition: border-color .2s	
+
+		&__link
+			width: 100%
+			line-height: 1.2			
+			white-space: normal
+			transition: color .2s				
+			height: auto
+			padding: 15px 50px 15px 20px
+			transition: background-color .2s, color .2s 	
+			&:after				
+				transform: rotate(-90deg)			
+				right: 15px	
+					
+		&__back			
+			cursor: pointer
+			display: inline-block				
+			user-select: none
+			font-size: 14px
+			text-transform: uppercase			
+			width: 42px
+			height: 42px
+			background-color: $accent-color					
+			position: absolute
+			text-indent: -9999px
+			top: 0
+			right: 0
+			background-image: url('../img/go-back.svg')
+			background-size: 14px
+			background-position: center
+			background-repeat: no-repeat
+			
+		&__title
+			display: block			
+			line-height: 1.2
+			transition: color .2s
+			font-size: 14px			
+			text-transform: uppercase
+			padding: 15px
+			+bold
+			border-top: 1px solid #e4e4e4
+
+	.submenu
+		transition: transform .2s linear, opacity .2s linear, visibility .2s linear		
+		border: none
+		position: fixed
+		top: 0
+		left: 0
+		height: 100%
+		max-height: 100vh
+		transform: translateX(100%)
+		min-width: auto
+		width: 280px
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch			
+		padding: 0
+		opacity: 0		
+		visibility: hidden		
+		cursor: default
+		position: fixed				
+		box-shadow: none
+		padding-top: 70px		
+		border-radius: 0		
+		background-color: #fff
+		&:before,
+		&:after
+			display: none
+		&.slide
+			transform: translateX(0)
+			opacity: 1
+			visibility: visible
+			z-index: 2
+			background-color: $bg-color
+			.submenu-2
+				opacity: 1
+				visibility: visible
+		&__item
+			border-bottom: 1px solid #e4e4e4
+			height: auto
+			border-top: 1px solid #e4e4e4
+			& + .submenu__item
+				margin-top: -1px	
+			&--sub
+				.submenu__link
+					&:after
+						display: none
+			&--icon
+				.submenu-2
+					padding-left: 60px
+			&.active
+				.submenu__link
+					color: $accent-color
+		&__link
+			width: 100%
+			line-height: 1.2			
+			white-space: normal
+			transition: color .2s					
+			font-size: 14px
+			height: auto
+			padding: 15px 20px
+			transition: background-color .2s, color .2s 					
+			&.active
+				color: $accent-color		
+				background-color: $bg-color	
+				text-decoration: underline
+
+	.submenu-2
+		position: relative
+		left: auto
+		width: auto
+		margin-top: 10px
+		padding-top: 0	
+		padding-left: 35px
+		&__item
+			& + .submenu-2__item
+				margin-top: 25px
+			&.active
+				.submenu-2__link
+					text-decoration: none
+
+	.submenu-3
+		margin-top: 10px
+		&__item			
+			&.active
+				.submenu-3__link
+					text-decoration: none

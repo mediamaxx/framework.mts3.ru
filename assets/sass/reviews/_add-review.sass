@@ -1,0 +1,169 @@
+.add-review
+	background-color: #f5f5f7
+	padding: 60px 0 63px
+	margin-bottom: -3px
+	&-block
+		background-color: #fff
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05)
+		padding-top: 42px
+		padding-left: 125px
+		padding-right: 125px
+		padding-bottom: 30px
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center right
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			top: 0
+			right: 0
+			bottom: 0
+			width: 940px
+			background: linear-gradient(-265.36deg, #FFFFFF 25.74%, rgba(255, 255, 255, 0) 109.17%)
+		&:before
+			position: absolute
+			content: ''
+			display: block
+			top: 0
+			left: 0
+			bottom: 0
+			width: calc(100% - 940px)
+			background-color: #fff
+	.section
+		&-title
+			text-align: left		
+	&__info
+		position: relative
+		z-index: 2	
+	&__form
+		margin-top: 20px
+		width: 567px
+		.form
+			.form
+				&-block
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: space-between
+					flex-wrap: wrap
+					margin-bottom: -17px
+				&-row
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: space-between
+					align-items: center
+					margin-top: 5px
+			.input-wrapper
+				width: calc(50% - 21px)
+				margin-bottom: 17px
+				&--textarea
+					width: 100%
+			.submit-wrapper
+				margin-left: 30px
+
+@media only screen and (max-width : 1466px)	
+
+	.add-review
+		&-block
+			padding-left: 70px
+			padding-right: 70px
+
+@media only screen and (max-width : 1199px)	
+
+	.add-review
+		&-block
+			padding: 50px 
+			background-size: cover
+			&:after				
+				width: 700px
+				background: linear-gradient(100deg, #FFFFFF 45%, rgba(255, 255, 255, 0) 90%)
+			&:before
+				width: calc(100% - 700px)
+
+@media only screen and (max-width : 991px)	
+
+	.add-review
+		&-block
+			padding: 40px 40px 30px
+			&:after				
+				width: 500px
+				background: linear-gradient(100deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%)
+			&:before
+				width: calc(100% - 500px)
+		&__form
+			width: 100%
+
+@media only screen and (max-width : 767px)	
+
+	.add-review
+		&-block
+			padding: 35px 30px 220px
+			background-position: bottom right
+			background-size: 100% 200px
+			&:after,			
+			&:before
+				display: none
+		&__form
+			.form
+				.input-wrapper
+					width: calc(50% - 10px)
+					&--textarea
+						width: 100%
+
+@media only screen and (max-width : 575px)	
+
+	.add-review
+		.section-title
+			text-align: center
+		&-block
+			padding-bottom: 230px
+			padding-left: 20px
+			padding-right: 20px
+		&__info
+			max-width: 100%
+		&__form
+			width: 100%			
+		&-block
+			background-size: auto 200px
+		&__form
+			.form
+				.input-wrapper
+					width: 100%
+				&-row
+					flex-direction: column
+				.submit-wrapper
+					margin-left: 0
+				.file-upload			
+					top: -4px
+					&__btn
+						width: 50px
+						height: 50px
+						display: inline-block
+						background-color: $accent-color
+						text-indent: -9999px
+						background-image: url('../img/download.svg')
+						background-repeat: no-repeat
+						background-size: 16px
+						background-position: center
+						transition: background-color .2s      					
+						&:hover
+							background-color: $hover-color
+					&__information							
+						margin-right: 0
+						strong
+							font-size: 14px
+						span
+							font-size: 10px
+						&-block
+							flex-direction: column
+							width: calc(100% - 70px)
+				.file-name
+					margin-top: 10px
+					font-size: 14px

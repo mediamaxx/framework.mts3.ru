@@ -1,0 +1,319 @@
+.footer
+	background-color: #fff
+	&-top		
+		&-block
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			border-top: 3px solid #ebebeb
+			padding: 65px	0 27px
+
+	&-head
+		width: 160px
+		margin-right: 90px	
+		flex-shrink: 0		
+		position: relative
+		top: -30px
+
+	&__logo
+		width: 100%
+		max-width: 160px
+
+	&__social
+		justify-content: space-between		
+		margin-top: 6px
+		width: 100%
+		.social
+			&__link					
+				margin-right: 15px	
+				&:last-child
+					margin-right: 0
+				.svg
+					path
+						fill: $accent-color
+				&:hover						
+					.svg
+						path
+							fill:  $hover-color
+	
+	&-contacts		
+		flex-shrink: 0
+		width: 250px	
+		text-align: right
+		margin-left: 60px
+
+	&__address
+		text-align: right
+		margin-top: 55px
+	
+	&-menu
+		&-block			
+			width: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-start		
+			flex-wrap: wrap
+			margin-left: auto
+			margin-right: auto
+		&-top			
+			width: 100%		
+			position: relative
+			top: -5px	
+			.footer-menu	
+				&__list
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex			
+					align-items: center
+				&__item
+					margin-right: 15px
+					&:last-child
+						margin-right: 0
+					&.active
+						.footer-menu__link
+							text-decoration-color: $accent-color	
+							color: $accent-color	
+				&__link
+					font-size: 12px
+					white-space: nowrap	
+					color: #646464	
+					transition: text-decoration-color .2s, color .2s
+					&:hover		
+						text-decoration-color: $accent-color	
+						color: $accent-color						
+		&__item
+			&.active
+				.footer-menu__link
+					text-decoration: underline			
+					text-decoration-color: $accent-color
+		&__link					
+			font-size: 18px
+			line-height: 1.2
+			display: inline-block			
+			text-decoration: none
+			text-decoration-color: transparent
+			transition: text-decoration-color .2s
+			color: $accent-color			
+			&:hover
+				text-decoration: underline			
+				text-decoration-color: $accent-color
+		&-bot			
+			width: 100%
+			margin-top: 30px
+			.footer
+				&-menu
+					&__list
+						columns: 2		
+						margin-bottom: -9px
+					&__item
+						margin-bottom: 9px
+
+
+	&-bot		
+		&-block
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			border-top: 1px solid #e2e2e2
+			padding: 15px 0 20px
+
+.developer
+	flex-shrink: 0
+	margin-left: 240px
+	width: 340px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&:hover
+		.developer__title
+			color: $accent-color
+			text-decoration: underline
+	&__title
+		font-size: 10px
+		line-height: 1.45
+		color: #424242
+		width: 100%
+		text-align: left
+	&__logo
+		order: 1
+		position: relative
+		top: 5px
+		flex-shrink: 0
+		width: 142px
+		img
+			width: 100%
+
+.copy
+	color: #acacac
+	font-size: 10px
+	line-height: 1.5
+
+@media only screen and (max-width : 1466px)		
+
+	.developer
+		margin-left: 120px
+
+	.footer
+		&-menu
+			&-top		
+				.footer-menu	
+					&__list
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex		
+						justify-content: center
+						flex-wrap: wrap
+
+@media only screen and (max-width : 1199px)	
+
+	.developer
+		margin-left: 60px
+
+	.footer
+		&-top
+			&-block
+				flex-wrap: wrap
+				padding-top: 40px
+		&-head
+			margin-right: 0
+			top: auto
+		&__address
+			margin-top: 30px
+
+	.footer
+		&-menu
+			&-block
+				order: 1
+				margin-top: 30px
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: nowrap
+				width: 100%
+			&-bot
+				margin-top: 0
+				width: 50%
+				padding-right: 30px
+				.footer-menu
+					&__list
+						columns: 1
+					&__item
+						margin-bottom: 3px
+					&__link
+						font-size: 16px
+			&-top
+				order: 1
+				width: 50%
+				top: auto
+				.footer-menu	
+					&__item
+						margin-bottom: 3px
+					&__list
+						display: block
+						columns: 2
+					&__link
+						font-size: 16px
+						white-space: normal
+
+@media only screen and (max-width : 991px)
+		
+	.developer
+		flex-direction: column
+		align-items: flex-start		
+		width: auto
+		top: auto
+		&__logo
+			order: -1
+			line-height: 1
+
+@media only screen and (max-width : 767px)	
+
+	.footer		
+		&-bot
+			&-block
+				flex-direction: column
+				align-items: center
+	
+	.developer
+		margin-top: 10px
+		margin-left: 0
+		align-items: center
+
+@media only screen and (max-width : 575px)
+
+	.footer
+		&-head
+			width: 160px
+		&-contacts
+			margin-left: 0
+			padding-left: 30px
+			width: calc(100% - 160px)
+		&-menu			
+			&-block
+				flex-wrap: wrap
+				margin-top: 30px
+			&-top			
+				width: 100%
+				margin-top: 20px
+				.footer-menu
+					&__item
+						padding-right: 10px
+			&-bot
+				width: 100%
+				columns: 2
+				padding-right: 0
+				.footer-menu
+					&__item
+						padding-right: 10px
+
+@media only screen and (max-width : 479px)
+
+	.footer
+		&-head
+			width: 140px
+		&-contacts
+			width: calc(100% - 140px)
+
+@media only screen and (max-width : 399px)
+
+	.footer
+		&-head
+			width: 160px
+			margin-left: auto
+			margin-right: auto
+		&-contacts
+			width: 100%
+			padding-left: 0
+			.phone__tels
+				align-items: center
+				margin-top: 30px
+		&__address
+			text-align: center
+
+@media only screen and (max-width : 374px)
+
+	.footer
+		&-menu
+			&-bot
+				columns: 1
+				.footer-menu
+					&__item
+						padding-right: 0

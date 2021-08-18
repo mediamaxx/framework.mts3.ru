@@ -1,0 +1,88 @@
+.not-found	
+	margin-top: 272px
+	padding-top: 50px
+	padding-bottom: 45px
+	&-block
+		text-align: center	
+		& > img
+			height: auto
+			width: 47%
+	&__title
+		font-weight: normal
+		margin: 0
+		+bold
+		font-size: 36px
+		line-height: 0.95
+		margin-top: -17px
+	&__back
+		font-size: 18px
+		white-space: nowrap
+		border-bottom: 1px solid transparent
+		line-height: 1
+		background-image: url('../img/arrow-more.svg')
+		background-repeat: no-repeat
+		background-size: 20px
+		background-position: top 6px right
+		padding-right: 33px
+		transition: border-color .2s
+		position: relative
+		display: inline-block
+		color: $accent-color
+		margin-top: 45px
+		&:after
+			position: absolute
+			display: block
+			content: ''
+			bottom: -1px
+			left: 0
+			right: 33px
+			height: 1px
+			background-color: transparent
+			transition: background-color .2s 
+		&:hover
+			&:after
+				background-color: $accent-color
+
+
+@media only screen and (max-width : 1466px)
+
+	.not-found
+		margin-top: 214px		
+		padding-top: 40px
+		&-block
+			& > img
+				width: 40%
+		&__back
+			margin-top: 30px
+
+@media only screen and (max-width : 1199px)
+
+	.not-found
+		margin-top: 100px
+		padding-top: 20px
+		&-block
+			&>img
+				width: 60%
+		&__title
+			font-size: 30px
+			margin-top: 0
+		&__back
+			font-size: 16px
+			background-position: top 5px right
+
+@media only screen and (max-width : 991px)
+
+	.not-found
+		margin-top: 80px
+
+@media only screen and (max-width : 575px)
+
+	.not-found		
+		&__title
+			font-size: 24px
+		&__back
+			font-size: 14px
+			background-position: top 4px right
+		&-block
+			&>img
+				width: 90%

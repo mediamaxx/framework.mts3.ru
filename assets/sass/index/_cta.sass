@@ -1,0 +1,163 @@
+.cta
+	background-color: #f5f5f7
+	padding: 65px 0 65px
+	&-block
+		background-color: #fff
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05)
+		padding-top: 38px
+		padding-left: 125px
+		padding-right: 125px
+		padding-bottom: 16px
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center right
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			top: 0
+			right: 0
+			bottom: 0
+			width: 935px
+			background: linear-gradient(100deg, #FFFFFF 34%, rgba(255, 255, 255, 0) 90%)
+		&:before
+			position: absolute
+			content: ''
+			display: block
+			top: 0
+			left: 0
+			bottom: 0
+			width: calc(100% - 935px)
+			background-color: #fff
+	.section
+		&-title
+			text-align: left
+		&-suptitle
+			text-align: left
+			margin-bottom: 20px
+	&__info
+		position: relative
+		z-index: 2
+	&__text
+		margin-top: 13px
+		line-height: 2.2
+		p
+			&:nth-child(1)
+				margin-top: 0
+		a
+			display: inline-block
+			margin-left: 9px
+			position: relative
+			top: 5px
+	&__form
+		margin-top: 27px
+		.form
+			.form-row
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				margin-left: -15px
+				margin-right: -15px
+				.input-wrapper
+					width: 261px
+					margin: 0 15px
+				.submit-wrapper
+					margin: 0 15px
+
+@media only screen and (max-width : 1466px)	
+
+	.cta
+		&-block
+			padding-left: 70px
+			padding-right: 70px
+
+@media only screen and (max-width : 1199px)	
+
+	.cta
+		&-block
+			padding: 50px 
+			background-size: cover
+			&:after				
+				width: 700px
+				background: linear-gradient(100deg, #FFFFFF 45%, rgba(255, 255, 255, 0) 90%)
+			&:before
+				width: calc(100% - 700px)
+
+@media only screen and (max-width : 991px)	
+
+	.cta
+		.section-title
+			font-size: 30px
+		.section-suptitle
+			font-size: 16px
+		&__info
+			max-width: 75%
+		&__text
+			font-size: 14px
+			line-height: 1.8
+		&-block
+			padding: 40px 40px 30px
+			&:after				
+				width: 500px
+				background: linear-gradient(100deg, #FFFFFF 25%, rgba(255, 255, 255, 0) 90%)
+			&:before
+				width: calc(100% - 500px)
+
+@media only screen and (max-width : 767px)	
+
+	.cta
+		&__info
+			max-width: 100%
+		&__form
+			width: 100%
+			.form
+				.form
+					&-row
+						margin-left: -5px
+						margin-right: -5px
+						.input-wrapper
+							width: 100%
+							margin: 0 10px
+						.submit-wrapper
+							width: 100%
+							margin: 0 10px
+							.btn
+								min-width: auto
+								width: 100%
+		&-block
+			padding: 35px 30px 220px
+			background-position: bottom right
+			background-size: 100% 200px
+			&:after,			
+			&:before
+				display: none
+
+@media only screen and (max-width : 575px)	
+
+	.cta
+		.section-title
+			font-size: 24px
+		.section-suptitle
+			font-size: 14px
+		&-block
+			padding-bottom: 210px
+		&__info
+			max-width: 100%
+		&__form			
+			.form
+				.form
+					&-row
+						margin-left: 0
+						margin-right: 0
+						flex-wrap: wrap
+						.input-wrapper
+							margin: 0 0 20px
+						.submit-wrapper
+							margin: 0
+		&-block
+			background-size: auto 200px

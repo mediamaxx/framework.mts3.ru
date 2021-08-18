@@ -1,0 +1,114 @@
+.sections
+	&-row
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin-right: -12px
+		margin-left: -12px
+		margin-top: 50px
+		margin-bottom: -35px
+	&__item
+		display: inline-block
+		width: calc(20% - 24px)
+		margin: 0 12px 35px
+		text-align: center
+		line-height: 1
+		position: relative
+		padding-top: 127px
+		&:hover
+			.sections__title
+				text-decoration: underline
+				text-decoration-color: $accent-color
+		& > img		
+			height: 127px
+			object-fit: cover
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+	&__title
+		display: block
+		color: $accent-color
+		font-size: 18px
+		text-decoration: none		
+		text-decoration-color: transparent
+		transition: text-decoration-color .2s		
+		line-height: 1.2
+		margin-top: 22px	
+
+@media only screen and (max-width : 1466px)	
+
+	.sections				
+		&__item
+			padding-top: 106px
+			& > img
+				height: 106px
+
+@media only screen and (max-width : 1199px)	
+
+	.sections		
+		&-row
+			margin-left: -10px
+			margin-right: -10px
+		&__item
+			width: calc(33.33% - 20px)
+			margin-left: 10px
+			margin-right: 10px
+			padding-top: 146px
+			& > img
+				height: 146px
+
+@media only screen and (max-width : 991px)	
+
+	.sections				
+		&__item
+			padding-top: 106px
+			& > img
+				height: 106px
+
+@media only screen and (max-width : 767px)	
+
+	.sections		
+		&__item
+			width: calc(50% - 20px)
+			padding-top: 120px
+			& > img
+				height: 120px
+
+@media only screen and (max-width : 575px)	
+
+	.sections
+		&-row
+			margin-top: 35px
+			margin-bottom: -25px
+		&__item
+			margin-bottom: 25px
+			padding-top: 90px
+			& > img
+				height: 90px
+		&__title
+			font-size: 16px
+			margin-top: 10px
+
+@media only screen and (max-width : 374px)	
+
+	.sections
+		&-row
+			margin-left: 0
+			margin-right: 0
+		&__item
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			padding-top: 0
+			& > img
+				height: auto
+				width: 100%
+				position: relative
+				top: auto
+				left: auto
+				right: auto
