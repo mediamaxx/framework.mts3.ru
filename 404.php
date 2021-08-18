@@ -17,6 +17,8 @@ get_header();
 </div>
 
 123
+cd www/framework.mts3.ru/wp-content/themes/mt_framework/
+git pull origin master
 </main>
 
 
